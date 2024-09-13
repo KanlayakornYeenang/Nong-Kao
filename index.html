@@ -20,7 +20,7 @@
         font-size: 1.5em;
         color: #333;
       }
-      #myButton {
+      #nongKaoButton {
         padding: 10px 20px;
         font-size: 1em;
         cursor: pointer;
@@ -28,13 +28,16 @@
     </style>
   </head>
   <body>
-    <button id="myButton" onclick="showMessage()">กดที่นี่</button>
+    <button id="nongKaoButton" onclick="showMessageNongKao()">น้องเก้ากดที่นี่</button>
     <div id="output"></div>
 
     <script>
-      function showMessage() {
-        document.getElementById("myButton").style.display = "none";
+      function showMessageNongKao() {
+        document.getElementById("nongKaoButton").style.display = "none";
         document.getElementById("output").innerText = "น้องเก้า เสร่อ.com";
+
+        var snd = new Audio("nongkao.com.mp3");
+        snd.play();
       }
     </script>
   </body>
